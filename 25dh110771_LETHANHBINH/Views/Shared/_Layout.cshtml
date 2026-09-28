@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Store - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>KIDS STORE</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("HOME", "Index", "Home")</li>
+                <li><a href="#">PAGES</a></li>
+                <li><a href="#">CATEGORY</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">FASHION</a></li>
+                <li><a href="#">SHOES</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+        </nav>
+
+        <div class="cart">
+            <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">3</span>
+            </a>
+            <span style="margin-left: 15px; color: #ff6a00; font-weight: bold;">📞 012345678xx</span>
+        </div>
+    </header>
+    <div class="main-container" style="padding: 20px;">
+        @RenderBody()
+    </div>
+    <hr />
+    <footer style="text-align: center; padding: 20px;">
+        <p>&copy; @DateTime.Now.Year - Cửa hàng quần áo trẻ em - 25dh110771_LETHANHBINH</p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
